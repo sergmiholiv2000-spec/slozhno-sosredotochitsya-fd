@@ -1,5 +1,125 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-attachment: fixed;
+  background: var(--bg-image);
+  min-height: 100vh;
+  min-inline-size: 375px;
+  max-inline-size: 1024px;
+  padding: 2vi;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  min-height: var(--min-height-header);
+  position: relative;
+  grid-template-areas: "menu" "title" "title__text";
+}
+
+@media (max-width: 375px) {
+  .decor-rec {
+    position: absolute;
+    justify-self: end;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: "IBM Plex Mono", sans-serif;
+    color: #ff0070;
+  }
+
+  .decor-rec::after {
+    content: "•";
+    font-weight: 900;
+    font-size: 30px;
+    font-family: "IBM Plex Mono", sans-serif;
+    color: #ff0070;
+    align-self: end;
+    filter: blur(50%);
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    row-gap: 1em;
+    grid-column: 2;
+    column-gap: 10px;
+  }
+  .header__theme-menu-button {
+    color: #ff0070;
+    font-family: "IBM Plex Mono", sans-serif;
+    line-height: 18px;
+    font-size: 18px;
+    text-transform: lowercase;
+    background-color: transparent;
+    border: none;
+  }
+
+  .header__theme-menu {
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+.header__theme-menu-item {
+}
+
+.header__title {
+  display: grid;
+  white-space: pre-line;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.83;
+  font-family: "IBM Plex Mono", sans-serif;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  align-items: center;
+  position: relative;
+}
+
+.title__text {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: #ff0070;
+  justify-self: end;
+  align-self: center;
+}
+
+.content-section {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  color: white;
+  grid-template-areas: "main-title" "main-title-decor" "main-text";
+}
+
+.content-section-one {
+  display: grid;
+}
+.main-title {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ff0070;
+  grid-area: "main-title";
+  justify-self: start;
+  padding-top: 8vi;
+  margin-bottom: 6vi;
+}
+
+.main-title-decor {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: black;
+  background-color: #ff0070;
+  grid-area: "main-title-decor";
+}
+.text-main-s-one {
+  padding-top: 10px;
+}
+.text-main {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #f1b2ce;
 }

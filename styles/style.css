@@ -18,6 +18,21 @@
   grid-template-areas: "menu" "title" "title__text";
 }
 
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "__";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 2px solid #ff0070;
+  border-right: 2px solid #ff0070;
+  width: 20px;
+  height: 20px;
+}
+
 @media (max-width: 375px) {
   .decor-rec {
     position: absolute;
@@ -122,4 +137,43 @@
   font-size: 18px;
   line-height: 23px;
   color: #f1b2ce;
+}
+.main-section-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  height: 100%;
+}
+
+.main-title-decor-eleven {
+  margin-top: 55vi;
+  color: black;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #ff0070;
+}
+
+.sectiom-gallery-item {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.footer {
+  display: grid;
+  block-size: 100vh;
+  min-height: var(--min-height-header);
+  position: relative;
+}
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.83;
+  font-family: "IBM Plex Mono", sans-serif;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  margin-top: 85vi;
 }

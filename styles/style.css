@@ -6,7 +6,6 @@
   min-height: 100vh;
   min-inline-size: 375px;
   max-inline-size: 1024px;
-  padding: 2vi;
 }
 
 .header {
@@ -15,7 +14,11 @@
   block-size: 100vh;
   min-height: var(--min-height-header);
   position: relative;
-  grid-template-areas: "menu" "title" "title__text";
+  padding: 2vi;
+}
+
+.main {
+  padding: 2vi;
 }
 
 .decorated-zone {
@@ -34,6 +37,9 @@
 }
 
 @media (max-width: 375px) {
+  .header {
+    min-height: 668px;
+  }
   .decor-rec {
     position: absolute;
     justify-self: end;
@@ -76,6 +82,7 @@
   }
 
   .header__theme-menu-item {
+    padding-right: 2vi;
   }
 
   .header__title {
@@ -97,27 +104,134 @@
     background-color: var(--accent-color);
     justify-self: end;
     align-self: center;
+    padding-bottom: 1vh;
   }
 
   .content-section {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
     color: var(--section-color);
-    grid-template-areas: "main-title" "main-title-decor" "main-text";
+    align-content: start;
   }
-
+  /*Секция 1*/
   .content-section-one {
     display: grid;
+    margin-top: 30px;
   }
+
+  .main-title-decor-one {
+    margin-top: 3vh;
+  }
+
+  .text-main-s-one {
+    padding-top: 2vh;
+  }
+  /*Секция 2*/
+  .content-section-two {
+    display: grid;
+    padding-top: 4vh;
+  }
+  .text-main-s-two {
+    padding-top: 2vh;
+  }
+
+  /*Секция 3*/
+  .content-section-three {
+    display: grid;
+    padding-top: 8vh;
+  }
+
+  .main-title-three {
+    padding-bottom: 3vh;
+  }
+
+  /*Секция 4*/
+  .content-section-four {
+    display: grid;
+    padding-top: 5vh;
+  }
+
+  .text-main-s-four {
+    padding-top: 2vh;
+  }
+
+  /*Секция 5*/
+
+  .content-section-five {
+    display: grid;
+    padding-top: 4vh;
+  }
+
+  .text-main-s-five {
+    padding-top: 2vh;
+  }
+
+  /*Секция 6*/
+  .content-section-six {
+    display: grid;
+    padding-top: 8vh;
+  }
+  .main-title-six {
+    padding-bottom: 3vh;
+  }
+
+  .main-title-decor-six {
+    margin-bottom: 3vh;
+  }
+
+  .text-main-s-six {
+    padding-top: 2vh;
+  }
+
+  /*Секция 7*/
+  .content-section-seven {
+    display: grid;
+    padding-top: 3vh;
+  }
+
+  .text-main-s-seven {
+    padding-top: 2vh;
+  }
+
+  /*Секция 8*/
+  .content-section-eight {
+    display: grid;
+    padding-top: 3vh;
+  }
+  .text-main-s-eight {
+    padding-top: 2vh;
+  }
+
+  /*Секция 9*/
+  .content-section-nine {
+    display: grid;
+    padding-top: 11vh;
+  }
+
+  .text-main-s-nine {
+    padding-top: 1vh;
+  }
+
+  .content-section-ten {
+    display: grid;
+    padding-top: 4vh;
+  }
+
+  .text-main-s-ten {
+    padding-top: 2vh;
+  }
+
+  .content-section-eleven {
+    padding-top: 7vh;
+    padding-bottom: 2vh;
+  }
+
   .main-title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 18px;
     color: var(--accent-color);
-    grid-area: "main-title";
     justify-self: start;
-    padding-top: 8vi;
-    margin-bottom: 6vi;
+    align-self: start;
   }
 
   .main-title-decor {
@@ -126,11 +240,8 @@
     font-size: 18px;
     color: var(--text-color-black);
     background-color: var(--accent-color);
-    grid-area: "main-title-decor";
   }
-  .text-main-s-one {
-    padding-top: 10px;
-  }
+
   .text-main {
     font-family: var(--font-family);
     font-weight: 400;
@@ -138,6 +249,7 @@
     line-height: 23px;
     color: var(--section-color);
   }
+
   .main-section-gallery {
     display: grid;
     grid-template-columns: 1fr;
@@ -146,7 +258,6 @@
   }
 
   .main-title-decor-eleven {
-    margin-top: 55vi;
     color: var(--text-color-black);
     font-family: var(--font-family);
     font-weight: 700;
@@ -166,6 +277,7 @@
     block-size: 100vh;
     min-height: var(--min-height-header);
     position: relative;
+    padding: 2vi;
   }
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -176,9 +288,9 @@
     align-items: center;
     justify-items: center;
     position: relative;
-    margin-top: 85vi;
+    margin-top: 78vi;
   }
 }
 
-@media (max-width: 678px) {
+@media (max-width: 768px) {
 }

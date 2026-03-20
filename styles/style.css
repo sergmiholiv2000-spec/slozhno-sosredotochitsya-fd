@@ -531,5 +531,40 @@
 
   /*Галлерея*/
   .main-section-gallery {
+    display: grid;
+    object-fit: contain;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+  .image-sunset {
+    grid-area: sunset;
+  }
+
+  .image-ice-cream {
+    grid-area: ice-cream;
+  }
+
+  .tape {
+    grid-area: tape;
+  }
+
+  .image-books {
+    grid-area: books;
+  }
+
+  .image-street {
+    grid-area: street;
+  }
+
+  /*Подвал*/
+  .footer__title {
+    justify-self: center;
+    align-self: center;
+    padding-top: 9vh;
+    padding-right: 0;
+    margin: 0;
   }
 }

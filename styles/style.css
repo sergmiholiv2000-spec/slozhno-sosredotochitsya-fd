@@ -684,6 +684,36 @@
     padding-bottom: 0;
   }
 
+  /*Секция 7*/
   .content-section-seven {
+    width: 649px;
+    padding-top: 20px;
+  }
+
+  /*Секция 8*/
+  .content-section-eight {
+    width: 649px;
+  }
+
+  .main-title-decor-eight {
+    padding: 0;
+    margin: 0;
+  }
+
+  /*Секция 9*/
+
+  .content-section-nine {
+    width: 649px;
+  }
+
+  /*Секция 10*/
+  .content-section-ten {
+    width: 649px;
+  }
+
+  /*Подвал*/
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-top: 95px;
   }
 }

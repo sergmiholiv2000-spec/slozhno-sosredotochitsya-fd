@@ -10,20 +10,14 @@
   --text-color-black: #353430;
   --section-color: #f1b2ce;
   --title-color: #ffc2e6;
-  .header__decoration-dark {
-    display: none;
-  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-  --bg-image: url("../images/cover-image-light.png");
-  --bg-color: #ff8dcb;
-  --text-color-black: #353430;
-  --section-color: #f1b2ce;
-  --title-color: #ffc2e6;
+    --bg-image: url("../images/cover-image-light.png");
+    --bg-color: #ff8dcb;
+    --text-color-black: #353430;
+    --section-color: #f1b2ce;
+    --title-color: #ffc2e6;
   }
-  .header__decoration-dark {
-    display: none;
-  }
-} 
+}

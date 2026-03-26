@@ -6,7 +6,7 @@
 
 :root.theme-light {
   --bg-image: url("../images/cover-image-light.png");
-  --bg-color: #ff8dcb;
+  --bg-color: #fff1f7;
   --text-color-black: #353430;
   --section-color: #f1b2ce;
   --title-color: #ffc2e6;
@@ -15,9 +15,13 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-image: url("../images/cover-image-light.png");
-    --bg-color: #ff8dcb;
+    --bg-color: #fff1f7;
     --text-color-black: #353430;
     --section-color: #f1b2ce;
     --title-color: #ffc2e6;
   }
+  /*
+  .decor-rec {
+    visibility: hidden;
+  }*/
 }

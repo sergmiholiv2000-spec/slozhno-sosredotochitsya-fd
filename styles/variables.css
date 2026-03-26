@@ -1,8 +1,8 @@
 :root {
   --bg-image: url("../images/cover-image-dark.png");
-  --bg-color: hsl(236, 88%, 24%);
+  --bg-color: #000028;
   --accent-color: #ff0070;
-  --font-family: "IBM Plex Mono", sans-serif;
+  --font-family: "IBM Plex Mono", monospace;
   --text-color-black: #000028;
   --section-color: #f1b2ce;
   --title-color: #db00ff;

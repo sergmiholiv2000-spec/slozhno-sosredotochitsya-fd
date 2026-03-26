@@ -8,14 +8,12 @@
   background-color: var(--bg-color);
   min-height: 100vh;
   min-inline-size: 375px;
-  max-inline-size: 1024px;
 }
 
 .header {
   display: grid;
-  grid-template-rows: min-content min-content 1fr;
+  grid-template-rows: repeat(3, min-content);
   block-size: 100vh;
-  min-height: 668px;
   position: relative;
   padding-right: 0.5em;
   padding-left: 0.5em;
@@ -110,7 +108,6 @@
 }
 
 .header__title {
-  display: grid;
   white-space: pre-line;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.83;
@@ -120,20 +117,22 @@
   align-items: center;
   justify-items: center;
   position: relative;
-  padding-bottom: 0.4em;
-  padding-left: 0.1em;
+  padding-top: 0.6em;
+}
+
+.header__title__text {
+  align-self: center;
+  padding-bottom: 0.5em;
 }
 
 .title__text {
+  display: grid;
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 18px;
   background-color: var(--accent-color);
   line-height: 23px;
   letter-spacing: 0;
-  justify-self: end;
-  align-self: center;
-  align-content: start;
 }
 
 .content-section {
@@ -150,6 +149,10 @@
   margin: 0;
 }
 
+.text-concentrate-walk-slovo {
+  text-shadow: 1px 1px 0 var(--accent-color);
+  text-decoration: none;
+}
 /*Секция 1*/
 .content-section-hard-concentrate {
   display: grid;
@@ -296,28 +299,46 @@
 
 @media (min-width: 768px) {
   .header {
-    min-height: 1024px;
     padding-left: 0;
-    margin-right: 1em;
-    margin-top: 0.7em;
   }
-  .decorated-zone {
+
+  .decor-rec {
+    padding-top: 0.6em;
+    padding-right: 0.5em;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header__theme-menu {
+    align-self: end;
+    padding-top: 7.3em;
+    padding-right: 1em;
   }
 
   .header__title {
     white-space: nowrap;
+    padding-top: 1.5em;
   }
 
   .title__text {
     justify-self: end;
     max-width: 364px;
     width: 100%;
-    margin-bottom: 0.3em;
-    margin-right: 0.1em;
+    margin-right: 1em;
+    padding-bottom: 0.8em;
   }
 
   .content-section {
     justify-items: end;
+    padding-top: 0.5em;
   }
   /*Секция 1*/
   .content-section-hard-concentrate {
@@ -590,7 +611,6 @@
 
 @media (min-width: 1024px) {
   .header {
-    min-width: 1024px;
   }
 
   .header__theme-menu {

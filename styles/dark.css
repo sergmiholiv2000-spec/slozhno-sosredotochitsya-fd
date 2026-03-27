@@ -7,10 +7,14 @@
 :root.theme-dark {
   --bg-image: url("../images/cover-image-dark.png");
   --bg-color: #000028;
-  --accent-color: #ff0070;
-  --text-color-black: #000028;
+  --text-color-title: #000028;
   --section-color: #f1b2ce;
+  --text-shadow-color:#FF0070;
   --title-color: #db00ff;
+  --color-button: #ff0070;
+  --text-color-title: #000028;
+  --text-color-decor: #ff0070;
+  --text-color: #f1b2ce;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,9 +22,13 @@
     --bg-image: url("../images/cover-image-dark.png");
     --bg-color: #000028;
     --accent-color: #ff0070;
-    --text-color-black: #000028;
+    --text-color-title: #000028;
     --section-color: #f1b2ce;
     --title-color: #db00ff;
+    --color-button: #ff0070;
+    --text-color-title: #000028;
+    --text-color-decor: #ff0070;
+    --text-color: #f1b2ce;
   }
   .decor-rec {
     visibility: visible;

@@ -7,18 +7,25 @@
 :root.theme-light {
   --bg-image: url("../images/cover-image-light.png");
   --bg-color: #fff1f7;
-  --text-color-black: #353430;
   --section-color: #f1b2ce;
-  --title-color: #ffc2e6;
+  --title-color: #FFC2E6;
+  --color-button: #353430;
+  --text-color-title: #353430;
+  --text-color-decor: #ff8dcb;
+  --text-color: #353430;
+  --text-shadow-color:#FF8DCB;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --bg-image: url("../images/cover-image-light.png");
     --bg-color: #fff1f7;
-    --text-color-black: #353430;
     --section-color: #f1b2ce;
     --title-color: #ffc2e6;
+    --color-button: #353430;
+    --text-color-title: #353430;
+    --text-color-decor: #ff8dcb;
+    --text-color: #353430;
   }
 }
 

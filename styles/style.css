@@ -264,10 +264,12 @@
 }
 
 .main-section-gallery {
+  max-width: 355px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   height: 100%;
-  gap: 0.2em;
+  gap: 0.3em;
 }
 
 .main-title-decor {
@@ -282,12 +284,14 @@
 }
 
 .footer {
+  max-width: 355px;
+  width: 100%;
   display: grid;
   block-size: 100vh;
   position: relative;
   align-items: center;
   justify-self: center;
-  padding-top: 7em;
+  margin-top: 3.3em;
 }
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -336,28 +340,31 @@
     padding-bottom: 0.8em;
   }
 
+  .main {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
   .content-section {
     justify-items: end;
     padding-top: 0.5em;
   }
+
   /*Секция 1*/
   .content-section-hard-concentrate {
-    display: grid;
     grid-template-columns: 1fr 2fr;
     max-width: 768px;
     width: 100%;
     padding-top: 1em;
+    max-height: fit-content;
   }
   .text-main-s-hard-concentrate-theme {
-    display: grid;
-    justify-content: flex-start;
-    position: relative;
     grid-column: 3/2;
     grid-row: 1/2;
     align-self: start;
-    gap: 0;
-    padding: 0;
-    margin: 0;
+    max-width: 472px;
+    width: 100%;
+    max-height: fit-content;
   }
 
   .main-title-hard-concentrate {
@@ -365,32 +372,34 @@
     grid-row: 1 span 2;
     max-width: 236px;
     width: 100%;
-    padding-top: 35px;
+    padding-top: 2.3em;
     margin-bottom: 0;
+    padding-bottom: 0;
+    max-height: fit-content;
   }
 
   .text-main-s-concentrate {
-    padding-top: 70px;
-    margin: 0;
-    padding-left: 10px;
+    padding-top: 4em;
+    padding-left: 0.8em;
+    max-width: 472px;
+    width: 100%;
   }
 
   .main-title-decor {
     max-height: fit-content;
-    padding: 0;
-    margin-top: 34px;
-    margin-left: 10px;
+    margin-top: 2em;
+    margin-left: 1em;
   }
 
   /*Секция 2*/
   .content-section-dofamin {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding-left: 25vh;
+    max-width: 472px;
+    width: 100%;
+    justify-self: end;
     align-self: start;
-    padding-top: 22px;
-    margin-bottom: 0;
-    margin-top: 0;
+    padding-top: 0;
   }
 
   .main-title-decor-dofamin {
@@ -398,14 +407,17 @@
   }
 
   .text-main-s-dofamin {
-    padding-top: 10px;
+    padding-top: 0.6em;
   }
 
   /*Секция 3*/
   .content-section-low-concentration {
     display: grid;
     grid-template-rows: repeat(3, auto);
-    padding-top: 8vh;
+    padding-top: 5.2em;
+    justify-content: start;
+    max-width: 728px;
+    width: 100%;
   }
 
   .main-title-low-concentration {
@@ -415,10 +427,12 @@
     padding-top: 0;
   }
   .main-title-decor-low-concentration {
-    margin-top: 22px;
+    margin-top: 1.2em;
+    margin-bottom: 0;
+    margin-left: 0.3em;
   }
   .text-main-s-low-concentration {
-    padding-top: 12px;
+    padding-top: 0.7em;
   }
 
   /*Секция 4*/
@@ -429,10 +443,12 @@
   }
 
   .main-title-decor-meal {
-    margin-top: 25px;
+    margin-top: 1.1em;
+    margin-bottom: 0;
+    margin-left: 0.3em;
   }
   .text-main-s-meal {
-    padding-top: 10px;
+    padding-top: 0.5em;
   }
 
   /*Секция 5*/
@@ -442,31 +458,31 @@
   }
 
   .main-title-decor-gadgets {
-    margin-top: 22px;
+    margin-top: 1.4em;
+    margin-bottom: 0;
+    margin-left: 0.3em;
   }
 
   .text-main-s-gadgets {
-    padding-top: 12px;
+    padding-top: 0.4em;
   }
 
   /*Секция 6*/
   .content-section-meditation {
-    display: grid;
-    grid-template-columns: 1fr 2fr auto;
-    grid-template-rows: 1fr auto;
+    max-width: 768px;
+    width: 100%;
+    padding-top: 5.3em;
   }
 
   .text-main-s-meditation-theme {
-    display: grid;
     grid-column: 2/3;
-    align-self: start;
-    gap: 0;
-    padding: 0;
   }
   .main-title-meditation {
+    display: grid;
     align-self: start;
-    padding: 0;
-    margin: 0px;
+    justify-items: start;
+    max-width: 236px;
+    width: 100%;
   }
 
   .text-main-s-meditation {
@@ -474,21 +490,27 @@
     padding: 0;
     margin: 0;
     grid-row: 1/2;
-    padding-left: 15px;
+    padding-top: 4.2em;
+    padding-left: 1.2em;
   }
 
   .main-title-decor-meditation {
     max-height: fit-content;
     grid-column: 2;
     padding: 0;
-    margin-left: 10px;
     grid-row: 1;
     margin-top: 0;
   }
 
   .main-title-decor-meditation-lite {
     padding: 0;
-    margin-top: 40px;
+    align-items: start;
+    justify-self: end;
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 472px;
+    width: 100%;
+    margin-top: 1.2em;
   }
 
   /*Секция 7*/
@@ -497,59 +519,62 @@
     max-width: 472px;
     width: 100%;
     justify-self: end;
-    padding: 0;
   }
 
   .main-title-decor-music {
     margin-top: 5px;
     margin-left: 0;
+    margin-bottom: 0;
   }
 
   .text-main-s-music {
-    padding-top: 12px;
+    padding-top: 0.7em;
     padding-left: 0;
   }
 
   /*Секция 8*/
   .content-section-walk {
-    display: grid;
     max-width: 472px;
     width: 100%;
     justify-self: end;
-    padding-top: 22px;
+    padding-top: 1.4em;
     padding-left: 0;
   }
 
   .text-main-s-walk {
-    padding-top: 10px;
+    padding-top: 0.6em;
   }
 
   .main-title-decor-walk {
     margin-top: 0;
     margin-left: 0;
+    margin-bottom: 0;
   }
 
   /*Секция 9*/
   .content-section-good-food {
-    display: grid;
     max-width: 472px;
     width: 100%;
     justify-self: end;
-    padding-top: 25px;
+    padding-top: 1.3em;
     padding-left: 0;
     margin-left: 0;
   }
   .main-title-decor-good-food {
     margin-top: 0;
     margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .text-main-s-good-food {
+    padding-top: 0.8em;
   }
   /*Секция 10*/
   .content-section-books {
-    display: grid;
     max-width: 472px;
     width: 100%;
     justify-self: end;
-    padding-top: 21px;
+    padding-top: 1.4em;
     padding-left: 0;
     margin-left: 0;
   }
@@ -557,27 +582,34 @@
   .main-title-decor-books {
     margin-top: 0;
     margin-left: 0;
+    margin-bottom: 0;
   }
 
   .text-main-s-books {
-    padding-top: 12px;
+    padding-top: 0.6em;
   }
 
   /*Секция 11*/
   .content-section-picture {
-    display: grid;
-    padding-top: 82px;
+    max-width: 728px;
+    width: 100%;
+    margin-left: 0;
+  }
+  .main-title-decor-picture {
+    margin-left: 0;
   }
 
   /*Галлерея*/
   .main-section-gallery {
-    display: grid;
+    max-width: 728px;
+    width: 100%;
     object-fit: contain;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
+    gap: 1em;
   }
   .image-sunset {
     grid-area: sunset;
@@ -600,47 +632,90 @@
   }
 
   /*Подвал*/
+  .footer {
+    max-width: 768px;
+    width: 100%;
+    margin-top: 3.75em;
+  }
   .footer__title {
     justify-self: center;
     align-self: center;
-    padding-top: 9vh;
-    padding-right: 0;
-    margin: 0;
   }
 }
 
 @media (min-width: 1024px) {
   .header {
+    max-width: 1024px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    align-self: start;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 5px;
+  }
+  .decor-rec {
+    right: 10px;
   }
 
   .header__theme-menu {
     justify-self: center;
-    align-self: start;
+    align-items: start;
+    padding-top: 1.1em;
+    padding-left: 1.8em;
   }
   .header__theme-menu-list {
     display: flex;
     justify-content: space-between;
+    gap: 1.2em;
   }
 
   .header__theme-menu-item {
-    padding: 3px;
+    padding: 0.2em;
   }
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-top: 1.75em;
   }
 
   .title__text {
     max-width: 491px;
     width: 100%;
+    padding: 0;
+    margin-bottom: 0.8em;
+    margin-right: 0.45em;
+  }
+
+  .content-section {
+    padding-top: 1.5em;
   }
   /*Секция 1*/
   .content-section-hard-concentrate {
-    padding: 0;
+    max-width: 984px;
+    width: 100%;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .main-title-hard-concentrate {
-    white-space: nowrap;
+    max-width: 315px;
+    width: 100%;
+    padding-top: 1.9em;
+  }
+
+  .main-title-multitasking {
+    max-width: 649px;
+    width: 100%;
+  }
+
+  .text-main-s-concentrate {
+    max-width: 649px;
+    width: 100%;
+    padding-top: 4em;
   }
 
   /*Секция 2*/
@@ -649,7 +724,8 @@
     width: 100%;
     padding: 0;
     justify-self: end;
-    padding-top: 15px;
+    padding-top: 0;
+    padding-left: 0.5em;
   }
 
   /*Секция 3-5*/
@@ -660,47 +736,71 @@
 
   /*Секция 3*/
   .content-section-low-concentration {
-    padding-top: 50px;
-    margin: 0;
+    max-width: 315px;
+    width: 100%;
+    padding-top: 2.5em;
   }
 
   .main-title-low-concentration {
-    white-space: nowrap;
-    padding-top: 35px;
+    max-width: 315px;
+    width: 100%;
+    padding-top: 2.1em;
   }
 
   .main-title-decor-low-concentration {
-    margin-left: 0;
-    margin-top: 8px;
+    margin-top: 0.8em;
   }
 
   .text-main-s-low-concentration {
     padding: 0;
     margin: 0;
     align-items: start;
-    padding-bottom: 60px;
+    padding-bottom: 3.3em;
+    padding-left: 0.3em;
   }
 
   /*Секция 4*/
   .content-section-meal {
-    padding-top: 0;
-    margin-top: 0;
-    align-self: end;
-    padding-bottom: 70px;
+    max-width: 315px;
+    width: 100%;
+    align-self: center;
+    padding-top: 2.5em;
+    margin-left: 0.5em;
   }
   /*Секция 5*/
   .content-section-gadgets {
-    align-items: end;
-    padding-top: 130px;
-    padding-left: 5px;
-    margin: 0;
+    max-width: 315px;
+    width: 100%;
+    align-self: center;
+    padding-top: 7.6em;
+    padding-left: 1em;
+    padding-right: 0;
+  }
+  .main-title-decor-gadgets {
+    max-width: 315px;
+    width: 100%;
+  }
+  .text-main-s-gadgets {
+    padding-left: 0.25em;
+    padding-top: 0.6em;
   }
 
   /*Секция 6*/
   .content-section-meditation {
-    padding-top: 85px;
+    max-width: 984px;
+    width: 100%;
+    padding-top: 4em;
+  }
+
+  .main-title-meditation {
+    max-width: 315px;
+    width: 100%;
+    margin-left: 0.3em;
+    margin-right: 0.9em;
   }
   .main-title-decor-meditation {
+    max-width: 649px;
+    width: 100%;
     padding: 0;
     margin-bottom: 0;
     grid-template-rows: repeat(2, 1fr);
@@ -708,36 +808,38 @@
     margin: 0;
   }
   .main-title-decor-meditation-lite {
+    max-width: 649px;
+    width: 100%;
     margin: 0;
     padding: 0;
-    margin-bottom: 10px;
     grid-row: 1;
-    margin-top: 43px;
+    margin-top: 1.3em;
   }
 
   .text-main-s-meditation {
-    padding-top: 0;
-  }
-  .text-main-s-meditation-theme {
-    padding-bottom: 0;
+    max-width: 649px;
+    width: 100%;
+    padding-top: 4.3em;
+    padding-left: 0;
   }
 
   /*Секция 7*/
   .content-section-music {
     max-width: 649px;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 1.1em;
+    padding-left: 0.5em;
+  }
+
+  .text-main-s-music {
+    padding-top: 0.6em;
   }
 
   /*Секция 8*/
   .content-section-walk {
     max-width: 649px;
     width: 100%;
-  }
-
-  .main-title-decor-walk {
-    padding: 0;
-    margin: 0;
+    padding-left: 0.5em;
   }
 
   /*Секция 9*/
@@ -745,16 +847,36 @@
   .content-section-good-food {
     max-width: 649px;
     width: 100%;
+    padding-left: 0.5em;
   }
 
   /*Секция 10*/
   .content-section-books {
     max-width: 649px;
     width: 100%;
+    padding-left: 0.5em;
+    padding-top: 1.1em;
   }
 
+  .content-section-picture {
+    max-width: 984px;
+    width: 100%;
+  }
+  .main-section-gallery {
+    max-width: 984px;
+    width: 100%;
+    gap: 1.2em;
+    margin-left: 0.5em;
+  }
   /*Подвал*/
+  .footer {
+    max-width: 1024px;
+    width: 100%;
+    margin-top: 4.5em;
+  }
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-bottom: 0.7em;
+    padding-left: 0.1em;
   }
 }

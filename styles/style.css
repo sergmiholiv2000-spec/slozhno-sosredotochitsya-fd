@@ -153,6 +153,19 @@
   text-shadow: 1px 1px 0 var(--text-shadow-color);
   text-decoration: none;
 }
+
+.text-concentrate-walk-slovo:hover {
+  border: 1px solid var(--color-button);
+}
+
+.text-concentrate-walk-slovo::focus-visible {
+  border: 1px solid var(--color-button);
+}
+
+.text-concentrate-walk-slovo::focus {
+  outline: none;
+}
+
 /*Секция 1*/
 .content-section-hard-concentrate {
   display: grid;
@@ -876,7 +889,6 @@
   }
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-bottom: 0.7em;
     padding-left: 0.1em;
   }
 }

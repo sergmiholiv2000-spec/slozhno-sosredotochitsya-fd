@@ -130,7 +130,7 @@
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 18px;
-  background-color: var(--text-color-decor);
+  background-color: var(--text-color-decor-bg);
   line-height: 23px;
   letter-spacing: 0;
 }
@@ -255,7 +255,7 @@
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 18px;
-  color: var(--text-color-title);
+  color: var(--text-color-title-main);
   justify-self: start;
   align-self: start;
 }
@@ -265,7 +265,7 @@
   font-weight: 700;
   font-size: 18px;
   color: var(--text-color-title);
-  background-color: var(--text-color-decor);
+  background-color: var(--text-color-decor-bg);
 }
 
 .text-main {
@@ -745,19 +745,28 @@
   .content-section-low-concentration-gadgets {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    max-width: 1024px;
+    width: 100%;
   }
 
   /*Секция 3*/
   .content-section-low-concentration {
+    display: grid;
     max-width: 315px;
     width: 100%;
-    padding-top: 2.5em;
+    padding-top: 1em;
   }
 
   .main-title-low-concentration {
     max-width: 315px;
     width: 100%;
-    padding-top: 2.1em;
+    grid-row: 1;
+    grid-column: 1;
+    padding: 0;
+    margin: 0;
+    align-self: end;
+    padding-top: 3.3em;
+    padding-bottom: 0;
   }
 
   .main-title-decor-low-concentration {
@@ -878,8 +887,7 @@
   .main-section-gallery {
     max-width: 984px;
     width: 100%;
-    gap: 1.2em;
-    margin-left: 0.5em;
+    gap: 1em;
   }
   /*Подвал*/
   .footer {

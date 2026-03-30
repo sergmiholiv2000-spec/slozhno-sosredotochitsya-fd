@@ -8,12 +8,14 @@
   --bg-image: url("../images/cover-image-light.png");
   --bg-color: #fff1f7;
   --section-color: #f1b2ce;
-  --title-color: #FFC2E6;
+  --title-color: #ffc2e6;
   --color-button: #353430;
   --text-color-title: #353430;
-  --text-color-decor: #ff8dcb;
+  --text-color-decor-bg: #ff8dcb;
   --text-color: #353430;
-  --text-shadow-color:#FF8DCB;
+  --text-shadow-color: #ff8dcb;
+  --text-color-black: #000028;
+  --text-color-title-main: #000028;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,8 +26,11 @@
     --title-color: #ffc2e6;
     --color-button: #353430;
     --text-color-title: #353430;
-    --text-color-decor: #ff8dcb;
+    --text-color-decor-bg: #ff8dcb;
     --text-color: #353430;
+    --text-shadow-color: #ff8dcb;
+    --text-color-black: #000028;
+    --text-color-title-main: #000028;
   }
 }
 

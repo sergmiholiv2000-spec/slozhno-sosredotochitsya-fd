@@ -5,6 +5,7 @@
   background: var(--bg-image);
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   background-color: var(--bg-color);
   min-height: 100vh;
   min-inline-size: 375px;
@@ -657,6 +658,10 @@
 }
 
 @media (min-width: 1024px) {
+  .page {
+    display: grid;
+    place-items: center;
+  }
   .header {
     max-width: 1024px;
     width: 100%;

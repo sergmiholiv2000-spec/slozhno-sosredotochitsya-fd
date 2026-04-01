@@ -142,7 +142,6 @@
 .content-section {
   display: grid;
   color: var(--text-color);
-  align-content: start;
 }
 .title-decor {
   margin: 0;
@@ -187,6 +186,8 @@
 .content-section-dofamin {
   display: grid;
   padding-top: 1.2em;
+  max-width: 355px;
+  width: 100%;
 }
 
 /*Секция 3*/
@@ -285,9 +286,9 @@
   max-width: 355px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
   height: 100%;
   gap: 0.3em;
+  justify-self: center;
 }
 
 .main-title-decor {
@@ -295,21 +296,21 @@
 }
 
 .sectiom-gallery-item {
-  height: 100%;
+  max-width: 355px;
   width: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .footer {
   max-width: 355px;
   width: 100%;
+
   display: grid;
   block-size: 100vh;
   position: relative;
   align-items: center;
   justify-self: center;
-  margin-top: 3.3em;
+  padding-top: 3em;
 }
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -322,7 +323,6 @@
 @media (min-width: 768px) {
   .header {
     padding-left: 0;
-    justify-self: end;
   }
 
   .decor-rec {
@@ -341,7 +341,6 @@
   }
 
   .header__theme-menu {
-    align-self: end;
     padding-top: 7.3em;
     padding-right: 1em;
   }
@@ -361,13 +360,16 @@
   }
 
   .main {
+    max-width: 768px;
+    width: 100%;
     padding-left: 1em;
     padding-right: 1em;
   }
 
   .content-section {
     justify-items: end;
-    padding-top: 0.5em;
+    padding-top: 0.7em;
+    gap: 0.2em;
   }
 
   /*Секция 1*/
@@ -375,51 +377,38 @@
     grid-template-columns: 1fr 2fr;
     max-width: 768px;
     width: 100%;
-    padding-top: 1em;
-    max-height: fit-content;
+    padding-top: 3em;
   }
   .text-main-s-hard-concentrate-theme {
     grid-column: 3/2;
     grid-row: 1/2;
-    align-self: start;
-    max-width: 472px;
-    width: 100%;
     max-height: fit-content;
   }
 
   .main-title-hard-concentrate {
-    max-height: fit-content;
-    grid-row: 1 span 2;
     max-width: 236px;
     width: 100%;
-    padding-top: 2.3em;
+    grid-row: 1 span 2;
     margin-bottom: 0;
-    padding-bottom: 0;
-    max-height: fit-content;
+    padding: 0;
   }
 
   .text-main-s-concentrate {
-    padding-top: 4em;
+    padding-top: 2em;
     padding-left: 0.8em;
-    max-width: 472px;
-    width: 100%;
   }
 
-  .main-title-decor {
-    max-height: fit-content;
-    margin-top: 2em;
-    margin-left: 1em;
+  .main-title-multitasking {
+    margin-left: 0.5em;
   }
 
   /*Секция 2*/
   .content-section-dofamin {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, fit-content, 1fr);
+    padding-top: 1em;
     max-width: 472px;
     width: 100%;
-    justify-self: end;
-    align-self: start;
-    padding-top: 0;
   }
 
   .main-title-decor-dofamin {
@@ -434,10 +423,8 @@
   .content-section-low-concentration {
     display: grid;
     grid-template-rows: repeat(3, auto);
-    padding-top: 5.2em;
+    padding-top: 5.1em;
     justify-content: start;
-    max-width: 728px;
-    width: 100%;
   }
 
   .main-title-low-concentration {
@@ -491,35 +478,35 @@
   .content-section-meditation {
     max-width: 768px;
     width: 100%;
-    padding-top: 5.3em;
+    padding-top: 5.2em;
+    gap: 0.1em;
   }
 
   .text-main-s-meditation-theme {
+    max-width: 472px;
+    width: 100%;
     grid-column: 2/3;
   }
   .main-title-meditation {
-    display: grid;
-    align-self: start;
-    justify-items: start;
     max-width: 236px;
     width: 100%;
   }
 
   .text-main-s-meditation {
-    align-self: end;
-    padding: 0;
-    margin: 0;
     grid-row: 1/2;
     padding-top: 4.2em;
-    padding-left: 1.2em;
+    padding-left: 0.5em;
   }
 
   .main-title-decor-meditation {
+    max-width: 472px;
+    width: 100%;
     max-height: fit-content;
     grid-column: 2;
-    padding: 0;
     grid-row: 1;
-    margin-top: 0;
+    margin: 0;
+    margin-right: 0.2em;
+    justify-self: end;
   }
 
   .main-title-decor-meditation-lite {
@@ -530,7 +517,8 @@
     grid-row: 1;
     max-width: 472px;
     width: 100%;
-    margin-top: 1.2em;
+    margin-top: 1.3em;
+    margin-right: 0.1em;
   }
 
   /*Секция 7*/
@@ -538,18 +526,13 @@
     display: grid;
     max-width: 472px;
     width: 100%;
-    justify-self: end;
+    padding: 0;
   }
-
   .main-title-decor-music {
-    margin-top: 5px;
-    margin-left: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
-
   .text-main-s-music {
-    padding-top: 0.7em;
-    padding-left: 0;
+    padding-top: 0.6em;
   }
 
   /*Секция 8*/
@@ -557,8 +540,8 @@
     max-width: 472px;
     width: 100%;
     justify-self: end;
-    padding-top: 1.4em;
     padding-left: 0;
+    padding-top: 1.2em;
   }
 
   .text-main-s-walk {
@@ -587,33 +570,31 @@
   }
 
   .text-main-s-good-food {
-    padding-top: 0.8em;
+    padding-top: 0.6em;
   }
   /*Секция 10*/
   .content-section-books {
     max-width: 472px;
     width: 100%;
     justify-self: end;
-    padding-top: 1.4em;
+    padding-top: 1.2em;
     padding-left: 0;
     margin-left: 0;
   }
 
   .main-title-decor-books {
-    margin-top: 0;
-    margin-left: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   .text-main-s-books {
-    padding-top: 0.6em;
+    padding-top: 0.62em;
   }
 
   /*Секция 11*/
   .content-section-picture {
     max-width: 728px;
     width: 100%;
-    margin-left: 0;
+    padding-top: 4.85em;
   }
   .main-title-decor-picture {
     margin-left: 0;
@@ -655,11 +636,11 @@
   .footer {
     max-width: 768px;
     width: 100%;
-    margin-top: 3.75em;
   }
   .footer__title {
     justify-self: center;
     align-self: center;
+    padding-top: 2.4em;
   }
 }
 
@@ -709,27 +690,28 @@
     margin-right: 0.45em;
   }
 
+  .main {
+    max-width: 1024px;
+    width: 100%;
+  }
+
   .content-section {
     padding-top: 1.5em;
   }
   /*Секция 1*/
   .content-section-hard-concentrate {
-    max-width: 984px;
+    max-width: 1024px;
     width: 100%;
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
+    gap: 0;
   }
 
   .main-title-hard-concentrate {
-    max-width: 315px;
+    max-width: 1024px;
     width: 100%;
     padding-top: 1.9em;
-  }
-
-  .main-title-multitasking {
-    max-width: 649px;
-    width: 100%;
   }
 
   .text-main-s-concentrate {

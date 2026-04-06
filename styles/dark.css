@@ -17,6 +17,8 @@
   --text-color: #f1b2ce;
   --text-color-title-main: #ff0070;
   --text-color-decor-bg: #ff0070;
+  --text-color-decor: #ff0070;
+  --display-decor-rec: block;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,8 +34,6 @@
     --text-color-decor: #ff0070;
     --text-color: #f1b2ce;
     --text-color-title-main: #ff0070;
-  }
-  .decor-rec {
-    visibility: visible;
+    --display-decor-rec: block;
   }
 }

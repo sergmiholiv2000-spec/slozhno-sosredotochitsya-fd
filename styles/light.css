@@ -16,6 +16,7 @@
   --text-shadow-color: #ff8dcb;
   --text-color-black: #000028;
   --text-color-title-main: #000028;
+  --display-decor-rec: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,9 +32,6 @@
     --text-shadow-color: #ff8dcb;
     --text-color-black: #000028;
     --text-color-title-main: #000028;
+    --display-decor-rec: none;
   }
-}
-
-.theme-light .decor-rec {
-  visibility: hidden;
 }

@@ -27,9 +27,9 @@
 }
 
 .main {
-  padding-left: 0.6em;
-  padding-right: 0.6em;
   justify-self: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .decorated-zone::before,
@@ -198,7 +198,8 @@
 }
 
 .main-title-hard-concentrate {
-  padding-bottom: 0;
+  max-width: 355px;
+  width: 100%;
 }
 
 /*Секция 2*/
@@ -216,6 +217,9 @@
 
 .main-title-decor-low-concentration {
   margin-top: 0.4em;
+}
+.text-main-s-low-concentration {
+  padding-top: 0.7em;
 }
 
 /*Секция 4*/
@@ -245,24 +249,24 @@
 }
 /*Секция 7*/
 .content-section-music {
-  padding-top: 1.4em;
+  padding-top: 0.6em;
   gap: 0.8em;
 }
 
 /*Секция 8*/
 .content-section-walk {
-  padding-top: 1.3em;
+  padding-top: 0.5em;
   gap: 0.8em;
 }
 
 /*Секция 9*/
 .content-section-good-food {
-  padding-top: 1.5em;
+  padding-top: 3.2em;
   gap: 0.8em;
 }
 
 .content-section-books {
-  padding-top: 1.3em;
+  padding-top: 0.5em;
   gap: 0.8em;
 }
 
@@ -318,7 +322,7 @@
   position: relative;
   align-items: center;
   justify-self: center;
-  margin-top: 3em;
+  margin-top: 2.8em;
 }
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -371,6 +375,7 @@
     max-width: 768px;
     width: 100%;
     padding-left: 1em;
+    padding-right: 1em;
     justify-items: end;
     padding-top: 0.7em;
   }
@@ -392,6 +397,7 @@
   }
 
   /*Секция 1*/
+
   .content-section-hard-concentrate {
     grid-template-columns: 1fr 2fr;
     max-width: 768px;
@@ -402,11 +408,13 @@
     grid-column: 3/2;
     grid-row: 1/2;
     max-height: fit-content;
+    grid-column: 2;
   }
 
   .main-title-hard-concentrate {
     max-width: 236px;
     grid-row: 1 span 2;
+    grid-column: 1;
   }
 
   .text-main-s-concentrate {
@@ -415,11 +423,20 @@
 
   /*Секция 2*/
   .content-section-dofamin {
-    grid-template-columns: repeat(1, fit-content, 1fr);
+    grid-template-columns: 1fr 2fr;
     padding-top: 1.5em;
-    max-width: 472px;
-    gap: 0.7em;
+    max-width: 768px;
+    gap: 1.3em;
+    row-gap: 0.5em;
     justify-self: end;
+  }
+
+  .main-title-decor-dofamin {
+    grid-column: 2;
+  }
+
+  .text-main-s-dofamin {
+    grid-column: 2;
   }
 
   /*Секция 3*/
@@ -577,6 +594,9 @@
 }
 
 @media (min-width: 1024px) {
+  .title__text {
+    margin-right: 0.2em;
+  }
   .header {
     max-width: 1024px;
     width: 100%;
@@ -620,16 +640,18 @@
 
   .title__text {
     max-width: 491px;
-    margin-right: 0.45em;
   }
 
   .main {
     max-width: 1024px;
+    padding-right: 0.2em;
   }
 
   /*Секция 1*/
+
   .content-section-hard-concentrate {
     max-width: 1024px;
+    gap: 0.8em;
   }
 
   .main-title-hard-concentrate {
@@ -642,50 +664,52 @@
 
   /*Секция 2*/
   .content-section-dofamin {
-    max-width: 649px;
-    padding-left: 0.5em;
+    max-width: 1024px;
   }
 
   /*Секция 3-5*/
   .content-section-low-concentration-gadgets {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1024px;
-    gap: 2em;
+    gap: 1.1em;
   }
 
   /*Секция 3*/
   .content-section-low-concentration {
+    grid-template-rows: repeat(2, min-content);
     max-width: 315px;
+    gap: 0.2em;
   }
 
   .main-title-low-concentration {
     max-width: 315px;
-    grid-row: 1;
     grid-column: 1;
+    padding-bottom: 0.7em;
   }
 
   .main-title-decor-low-concentration {
     max-height: fit-content;
-    grid-row: 1;
     grid-column: 1/2;
   }
 
   /*Секция 4*/
   .content-section-meal {
     align-self: center;
-    padding-top: 3.5em;
+    padding-top: 5.6em;
+    gap: 1em;
   }
   /*Секция 5*/
   .content-section-gadgets {
-    align-self: end;
-    padding-top: 9em;
+    padding-top: 9.3em;
+    gap: 0.5em;
   }
 
   /*Секция 6*/
   .content-section-meditation {
-    max-width: 984px;
-    padding-top: 4em;
-    gap: 1.5em;
+    max-width: 1024px;
+    padding-top: 5.6em;
+    gap: 1.3em;
+    row-gap: 1.1em;
   }
 
   .main-title-meditation {
@@ -695,13 +719,10 @@
   .main-title-decor-meditation {
     max-width: 649px;
     grid-template-rows: repeat(2, 1fr);
-    gap: 1em;
-    margin-top: 0.2em;
   }
   .main-title-decor-meditation-lite {
     max-width: 649px;
     grid-row: 1;
-    margin-top: 1.3em;
   }
 
   .text-main-s-meditation {
@@ -711,37 +732,31 @@
   /*Секция 7*/
   .content-section-music {
     max-width: 649px;
-    gap: 1em;
-    padding-left: 0.7em;
-    padding-top: 1.7em;
   }
 
   /*Секция 8*/
   .content-section-walk {
     max-width: 649px;
-    gap: 0.5em;
-    padding-left: 0.5em;
+    padding-top: 0.1em;
   }
 
   /*Секция 9*/
 
   .content-section-good-food {
     max-width: 649px;
-    padding-left: 0.5em;
+    padding-top: 0.2em;
   }
 
   /*Секция 10*/
   .content-section-books {
     max-width: 649px;
-    padding-left: 0.5em;
-    padding-top: 1.3em;
   }
 
   .content-section-picture {
-    max-width: 984px;
+    max-width: 1024px;
   }
   .main-section-gallery {
-    max-width: 984px;
+    max-width: 1024px;
     width: 100%;
     gap: 1.5em;
   }
@@ -774,6 +789,7 @@
   .footer {
     max-width: 1024px;
     min-height: 668px;
+    margin-top: 3.5em;
   }
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);

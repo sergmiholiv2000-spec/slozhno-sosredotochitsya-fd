@@ -10,6 +10,7 @@
   --section-color: #f1b2ce;
   --title-color: #ffc2e6;
   --color-button: #353430;
+  --color-button-frame: rgb(53, 52, 48, 0.4);
   --text-color-title: #353430;
   --text-color-decor-bg: #ff8dcb;
   --text-color: #353430;
@@ -26,6 +27,7 @@
     --section-color: #f1b2ce;
     --title-color: #ffc2e6;
     --color-button: #353430;
+    --color-button-frame: rgb(53, 52, 48, 0.4);
     --text-color-title: #353430;
     --text-color-decor-bg: #ff8dcb;
     --text-color: #353430;

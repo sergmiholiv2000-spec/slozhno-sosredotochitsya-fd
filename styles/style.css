@@ -235,6 +235,7 @@
   padding-top: 3.55em;
   gap: 1.3em;
 }
+
 .main-meditation-card {
   display: grid;
   gap: 0.6em;
@@ -326,7 +327,12 @@
 
 @media (min-width: 768px) {
   .header {
+    max-width: 768px;
+    width: 100%;
+    min-height: 1024px;
     padding-left: 0;
+    padding-right: 1.2em;
+    gap: 9.1em;
   }
 
   .decor-rec {
@@ -345,31 +351,24 @@
   }
 
   .header__theme-menu {
-    padding-top: 7.3em;
-    padding-right: 1em;
+    align-self: end;
   }
 
   .header__title {
-    white-space: nowrap;
-    padding-top: 1.5em;
-    padding-right: 1.5em;
+    padding-top: 0.28em;
   }
-
+  .header__title__text {
+    padding-top: 0.9em;
+  }
   .title__text {
     justify-self: end;
-    max-width: 364px;
+    max-width: 365px;
     width: 100%;
-    margin-right: 0.7em;
-    margin-bottom: 0.8em;
   }
 
   .main {
-    max-width: 768px;
-    width: 100%;
-    padding-left: 1em;
-    padding-right: 1em;
-    justify-items: end;
-    padding-top: 0.7em;
+    padding-right: 1.2em;
+    padding-left: 1.2em;
   }
 
   .text-main {
@@ -389,94 +388,105 @@
   }
 
   /*Секция 1*/
-
-  .content-section-hard-concentrate {
-    grid-template-columns: 1fr 2fr;
-    max-width: 768px;
-    padding-top: 3em;
-    gap: 1.3em;
+  .content-section-concentration-multitasking {
+    padding-top: 3.8em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "why multitasking multitasking"
+      "why dofamin dofamin";
+    column-gap: 2.2em;
   }
 
   .main-title-hard-concentrate {
     max-width: 236px;
-    grid-row: 1 span 2;
-    grid-column: 1;
+    grid-area: why;
   }
-
+  .content-section-multiasking-content {
+    grid-area: multitasking;
+    gap: 0.6em;
+  }
   /*Секция 2*/
   .content-section-dofamin {
-    grid-template-columns: 1fr 2fr;
-    padding-top: 1.5em;
-    max-width: 768px;
-    gap: 1.3em;
-    row-gap: 0.5em;
-    justify-self: end;
+    grid-area: dofamin;
+    padding-top: 0.25em;
+    gap: 0.6em;
+  }
+  .content-section-low-concentration-gadgets {
+    padding-top: 5.3em;
   }
 
+  .main-title-low-concentration {
+    max-width: 236px;
+  }
   /*Секция 3*/
   .content-section-low-concentration {
-    grid-template-rows: repeat(3, auto);
-    padding-top: 5.1em;
-    justify-content: start;
-    gap: 1em;
+    gap: 1.4em;
   }
 
   /*Секция 4*/
   .content-section-meal {
-    grid-template-rows: repeat(2, auto);
-    padding-top: 0.5em;
-    gap: 0.7em;
+    padding-top: 0.35em;
   }
 
   /*Секция 5*/
   .content-section-gadgets {
-    gap: 0.6em;
+    padding-top: 0.4em;
   }
 
   /*Секция 6*/
   .content-section-meditation {
-    display: grid;
-    max-width: 768px;
+    max-width: 728px;
     padding-top: 5.2em;
-    gap: 1em;
+    grid-template-columns: repeat(3, 1fr, min-content);
+    grid-template-areas:
+      "gold-fish five-tips five-tips"
+      "gold-fish meditation-card meditation-card"
+      "gold-fish music music"
+      "gold-fish walk walk"
+      "gold-fish good-food good-food"
+      "gold-fish books books";
   }
 
   .main-title-meditation {
     max-width: 236px;
+    grid-area: gold-fish;
+  }
+
+  .main-title-five-tips {
+    grid-area: five-tips;
+  }
+
+  .main-meditation-card {
+    grid-area: meditation-card;
+    gap: 0.7em;
   }
 
   /*Секция 7*/
   .content-section-music {
-    max-width: 472px;
-    gap: 0.9em;
-    grid-column: 2;
-    padding-top: 0.5em;
+    grid-area: music;
+    padding-top: 0.3em;
+    gap: 0.7em;
   }
 
   /*Секция 8*/
   .content-section-walk {
-    max-width: 472px;
-    padding-top: 0.3em;
-    grid-column: 2;
+    grid-area: walk;
+    padding-top: 0;
   }
 
   /*Секция 9*/
   .content-section-good-food {
-    max-width: 472px;
-    padding-top: 0.4em;
-    grid-column: 2;
+    grid-area: good-food;
   }
 
   /*Секция 10*/
   .content-section-books {
-    max-width: 472px;
-    padding-top: 0.3em;
-    grid-column: 2;
+    grid-area: books;
   }
 
   /*Секция 11*/
   .content-section-picture {
-    padding-top: 4.8em;
+    padding-top: 5.1em;
   }
 
   /*Галлерея*/
@@ -525,24 +535,24 @@
   .footer {
     max-width: 768px;
     min-height: 1024px;
-    margin: 0;
+    max-height: 100vh;
     margin-top: 3.7em;
   }
   .footer__title {
     justify-self: center;
     align-self: center;
-    padding-top: 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .title__text {
-    margin-right: 0.2em;
-  }
   .header {
-    max-width: 1024px;
+    max-width: 1440px;
     width: 100%;
-    padding: 0;
+    min-height: 768px;
+    padding-top: 0;
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+    gap: 1.25em;
   }
 
   .decorated-zone::before {
@@ -560,119 +570,99 @@
   .header__theme-menu {
     justify-self: center;
     align-items: start;
-    padding-top: 1.1em;
-    padding-left: 1.8em;
+    padding-left: 1.2em;
+    padding-top: 0;
   }
   .header__theme-menu-list {
     display: flex;
     justify-content: space-between;
-    gap: 1.2em;
+    gap: 1em;
   }
 
   .header__theme-menu-item {
-    padding: 0.2em;
   }
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-top: 1.75em;
+    padding-top: 1.65em;
   }
-
+  .header__title__text {
+    padding-top: 5.9em;
+  }
   .title__text {
     max-width: 491px;
   }
 
   .main {
-    max-width: 1024px;
+    max-width: 1440px;
     padding-right: 0.2em;
+    padding-left: 1.2em;
   }
 
   /*Секция 1*/
-
-  .content-section-hard-concentrate {
-    max-width: 1024px;
-    gap: 0.8em;
-  }
-
   .main-title-hard-concentrate {
-    max-width: 1024px;
-  }
-
-  /*Секция 2*/
-  .content-section-dofamin {
-    max-width: 1024px;
+    max-width: 315px;
   }
 
   /*Секция 3-5*/
   .content-section-low-concentration-gadgets {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1024px;
-    gap: 1.1em;
   }
 
   /*Секция 3*/
   .content-section-low-concentration {
-    grid-template-rows: repeat(2, min-content);
-    max-width: 315px;
-    gap: 0.2em;
+    grid-template-rows: repeat(3, min-content);
+    gap: 1.2em;
   }
 
   .main-title-low-concentration {
     max-width: 315px;
-    grid-column: 1;
-    padding-bottom: 0.7em;
+  }
+  .card-low-concentration {
+    gap: 0.3em;
   }
 
   /*Секция 4*/
   .content-section-meal {
-    align-self: center;
-    padding-top: 5.6em;
-    gap: 1em;
+    grid-template-rows: repeat(1, min-content);
+    grid-row: 2/1;
+    grid-column: 2;
+    padding-top: 4em;
   }
+
   /*Секция 5*/
   .content-section-gadgets {
-    padding-top: 9.3em;
-    gap: 0.5em;
+    grid-template-rows: repeat(1, min-content);
+    grid-row: 2/1;
+    grid-column: 3;
+    padding-top: 4em;
   }
 
   /*Секция 6*/
   .content-section-meditation {
-    max-width: 1024px;
-    padding-top: 5.6em;
-    gap: 1.3em;
-    row-gap: 1.1em;
   }
 
   .main-title-meditation {
-    max-width: 315px;
-    width: 100%;
   }
 
   /*Секция 7*/
   .content-section-music {
-    max-width: 649px;
   }
 
   /*Секция 8*/
   .content-section-walk {
-    max-width: 649px;
-    padding-top: 0.1em;
   }
 
   /*Секция 9*/
 
   .content-section-good-food {
-    max-width: 649px;
-    padding-top: 0.2em;
   }
 
   /*Секция 10*/
   .content-section-books {
-    max-width: 649px;
   }
 
   .content-section-picture {
-    max-width: 1024px;
   }
   .main-section-gallery {
     max-width: 1024px;

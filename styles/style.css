@@ -170,7 +170,6 @@
   font-size: 18px;
   color: var(--text-color-title-main);
   justify-self: start;
-  align-self: start;
 }
 
 .main-title-decor {
@@ -180,84 +179,45 @@
   color: var(--text-color-title);
   background-color: var(--text-color-decor-bg);
 }
-
+.title-decor {
+  padding: 0;
+}
 .text-main {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   color: var(--text-color);
+  padding-bottom: 0.3em;
+}
+.content-card {
+  display: grid;
+  row-gap: 0.6em;
 }
 
 .content-section-concentration-multitasking {
   padding-top: 2.5em;
   gap: 1.3em;
 }
-.content-section-multiasking-content {
-  display: grid;
-  gap: 0.6em;
-}
-
-.content-section-dofamin {
-  padding-top: 0.4em;
-  gap: 0.65em;
-}
 
 .content-section-low-concentration-gadgets {
-  gap: 1em;
-  padding-top: 3.55em;
+  gap: 1.15em;
+  padding-top: 3.4em;
 }
-.content-section-low-concentration {
-  gap: 1.3em;
-}
-
-.card-low-concentration {
-  display: grid;
-  gap: 0.65em;
-}
-
-.content-section-meal {
-  padding-top: 0.56em;
-  gap: 0.6em;
-}
-
-.content-section-gadgets {
-  padding-top: 0.6em;
-  gap: 0.6em;
-}
-
 .content-section-meditation {
-  padding-top: 3.55em;
+  padding-top: 3.3em;
   gap: 1.3em;
 }
-
-.main-meditation-card {
-  display: grid;
-  gap: 0.6em;
+.main-title-low-concentration {
+  padding-bottom: 0.3em;
 }
 
-.content-section-music {
-  padding-top: 0.5em;
-  gap: 0.55em;
-}
-
-.content-section-walk {
-  padding-top: 0.2em;
-  gap: 0.6em;
-}
-
-.content-section-good-food {
-  padding-top: 0.35em;
-  gap: 0.6em;
-}
-
-.content-section-books {
-  padding-top: 0.2em;
-  gap: 0.62em;
+.content-section-low-concentration-gadgets .content-card:nth-child(1) {
+  gap: 0.8em;
 }
 
 .content-section-picture {
-  padding-top: 3.3em;
+  padding-top: 2.9em;
 }
 
 /*Галерея*/
@@ -277,27 +237,27 @@
 
 .image-sunset {
   max-width: 355px;
-  max-height: 142px;
+  width: 100%;
 }
 
 .image-ice-cream {
   max-width: 355px;
-  max-height: 355px;
+  width: 100%;
 }
 
 .tape {
   max-width: 355px;
-  max-height: 237px;
+  width: 100%;
 }
 
 .image-books {
   max-width: 355px;
-  max-height: 355px;
+  width: 100%;
 }
 
 .image-street {
   max-width: 355px;
-  max-height: 237px;
+  width: 100%;
 }
 
 /*Подвал*/
@@ -385,96 +345,63 @@
 
   .content-section-concentration-multitasking {
     padding-top: 3.8em;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "why multitasking multitasking"
-      "why dofamin dofamin";
-    column-gap: 2.2em;
+    row-gap: 1.2em;
+    grid-template-columns: 1fr 2fr;
   }
-
+  .main-title-five-tips {
+    grid-column: 2;
+    grid-row: 1;
+  }
   .main-title-hard-concentrate {
-    max-width: 236px;
-    grid-area: why;
+    grid-row: 1/3;
   }
 
-  .content-section-multiasking-content {
-    grid-area: multitasking;
-    gap: 0.6em;
-  }
-
-  .content-section-dofamin {
-    grid-area: dofamin;
-    padding-top: 0.25em;
-    gap: 0.6em;
-  }
   .content-section-low-concentration-gadgets {
-    padding-top: 5.3em;
+    padding-top: 5em;
+    width: 100%;
   }
-
   .main-title-low-concentration {
     max-width: 236px;
   }
 
-  .content-section-low-concentration {
-    gap: 1.4em;
-  }
-
-  .content-section-meal {
-    padding-top: 0.35em;
-  }
-
-  .content-section-gadgets {
-    padding-top: 0.4em;
-  }
-
-  .content-section-meditation {
-    max-width: 768px;
-    padding-top: 5.2em;
-    grid-template-areas:
-      "gold-fish five-tips five-tips"
-      "gold-fish meditation-card meditation-card"
-      "gold-fish music music"
-      "gold-fish walk walk"
-      "gold-fish good-food good-food"
-      "gold-fish books books";
+  .content-section:nth-child(3) {
+    grid-template-areas: "what five-tips five-tips" "what sky sky" "what music music" "what walk walk" "what walk walk" "what food food" "what read read";
   }
 
   .main-title-meditation {
+    grid-area: what;
     max-width: 236px;
-    grid-area: gold-fish;
   }
 
   .main-title-five-tips {
     grid-area: five-tips;
   }
-
-  .main-meditation-card {
-    grid-area: meditation-card;
-    gap: 0.7em;
+  .content-section-meditation {
+    padding-top: 4.8em;
+    row-gap: 1.2em;
   }
 
-  .content-section-music {
+  .content-section-meditation .content-card:nth-child(3) {
+    grid-area: sky;
+    padding-top: 0.1em;
+  }
+  .content-section-meditation .content-card:nth-child(4) {
     grid-area: music;
-    padding-top: 0.3em;
-    gap: 0.7em;
   }
 
-  .content-section-walk {
+  .content-section-meditation .content-card:nth-child(5) {
     grid-area: walk;
-    padding-top: 0;
   }
-
-  .content-section-good-food {
-    grid-area: good-food;
+  .content-section-meditation .content-card:nth-child(6) {
+    grid-area: food;
   }
-
-  .content-section-books {
-    grid-area: books;
+  .content-section-meditation .content-card:nth-child(7) {
+    grid-area: read;
   }
 
   .content-section-picture {
     max-width: 1024px;
-    padding-top: 5.1em;
+    padding-top: 4.9em;
   }
 
   /*Галерея*/
@@ -492,38 +419,33 @@
   .image-sunset {
     grid-area: sunset;
     max-width: 479px;
-    max-height: 192px;
   }
 
   .image-ice-cream {
     grid-area: ice-cream;
     max-width: 229px;
-    max-height: 442px;
   }
 
   .tape {
     grid-area: tape;
     max-width: 229px;
-    max-height: 568px;
   }
 
   .image-books {
     grid-area: books;
     max-width: 230px;
-    max-height: 230px;
   }
 
   .image-street {
     grid-area: street;
     max-width: 479px;
-    max-height: 318px;
   }
 
   /*Подвал*/
   .footer {
     max-width: 768px;
     min-height: 1024px;
-    margin-top: 3.7em;
+    margin-top: 3.6em;
   }
   .footer__title {
     justify-self: center;
@@ -533,7 +455,7 @@
 
 @media (min-width: 1024px) {
   .header {
-    max-width: 1440px;
+    max-width: 1024px;
     min-height: 768px;
     padding-top: 0;
     gap: 1.25em;
@@ -577,114 +499,79 @@
     max-width: 491px;
     margin-right: 0.5em;
   }
-  .text-concentrate-walk-word {
-    text-shadow: 1px 1px 1 var(--text-color);
-  }
 
-  .text-concentrate-walk-word:hover {
-    border-bottom: 1px solid 1 var(--text-color);
-  }
-
-  .text-concentrate-walk-word:focus {
-    outline: 1px solid 1 var(--color-button);
-  }
   /*Контент*/
   .main {
     padding-right: 0.2em;
     padding-left: 1.2em;
   }
 
-  .main-title-hard-concentrate {
-    max-width: 315px;
-  }
   .content-section-concentration-multitasking {
-    column-gap: 1.5em;
+    column-gap: 0.9em;
   }
   .content-section-low-concentration-gadgets {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "card-concentration . ."
+      "card-concentration card-food card-gadget";
   }
-
-  .content-section-low-concentration {
-    grid-template-rows: repeat(3, min-content);
-    gap: 1.2em;
+  .main-title-decor {
+    height: fit-content;
   }
 
   .main-title-low-concentration {
     max-width: 315px;
-  }
-  .card-low-concentration {
-    gap: 0.5em;
+    padding-bottom: 0.3em;
   }
 
-  .content-section-meal {
-    grid-template-rows: min-content;
-    grid-row: 2/1;
-    grid-column: 2;
-    padding-top: 4em;
+  .content-section-low-concentration-gadgets .content-card:nth-child(1) {
+    grid-area: card-concentration;
+    height: fit-content;
+    gap: 0.7em;
   }
 
-  .content-section-gadgets {
-    grid-template-rows: min-content;
-    grid-row: 2/1;
-    grid-column: 3;
-    padding-top: 4em;
+  .content-section-low-concentration-gadgets .content-card:nth-child(2) {
+    grid-area: card-food;
+    padding-top: 2.9em;
+    height: fit-content;
   }
 
+  .content-section-low-concentration-gadgets .content-card:nth-child(3) {
+    grid-area: card-gadget;
+    padding-top: 2.9em;
+  }
   .content-section-meditation {
-    max-width: 1440px;
-    padding-top: 5.55em;
+    padding-top: 3.5em;
+    max-width: 1024px;
   }
-
   .main-title-meditation {
     max-width: 315px;
   }
-  .main-meditation-card {
-    gap: 0.5em;
-  }
-
-  .content-section-music {
-    gap: 0.5em;
-  }
-  .content-section-walk {
-    padding-top: 0.2em;
-  }
-  .content-section-good-food {
-    padding-top: 0.2em;
-  }
-
-  .content-section-books {
-    padding-top: 0.1em;
-  }
   .content-section-picture {
-    max-width: 1440px;
+    padding-top: 4.7em;
   }
   .main-section-gallery {
-    max-width: 1440px;
+    max-width: 1024px;
+    gap: 1.5em;
   }
 
   .image-sunset {
     max-width: 650px;
-    max-height: 260px;
   }
 
   .image-ice-cream {
     max-width: 314px;
-    max-height: 595px;
   }
 
   .tape {
     max-width: 315px;
-    max-height: 768px;
   }
 
   .image-books {
     max-width: 315px;
-    max-height: 315px;
   }
 
   .image-street {
     max-width: 649px;
-    max-height: 433px;
   }
   /*Подвал*/
   .footer {

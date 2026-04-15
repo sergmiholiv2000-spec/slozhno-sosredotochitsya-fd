@@ -9,6 +9,8 @@
   background-attachment: fixed;
   display: grid;
   place-items: center;
+  max-width: 1440px;
+  width: 100%;
 }
 
 .header {
@@ -152,6 +154,8 @@
 .text-concentrate-walk-word {
   text-shadow: 1px 1px 0 var(--text-shadow-color);
   text-decoration: none;
+  cursor: pointer;
+  outline-offset: 0.2em;
 }
 
 .text-concentrate-walk-word:hover {
@@ -159,8 +163,12 @@
 }
 
 .text-concentrate-walk-word:focus {
+  outline: none;
+}
+
+.text-concentrate-walk-word:focus-visible {
   outline: 1px solid var(--color-button);
-  outline-offset: 2px;
+  outline-offset: 0.2em;
   cursor: pointer;
 }
 
@@ -179,9 +187,11 @@
   color: var(--text-color-title);
   background-color: var(--text-color-decor-bg);
 }
-.title-decor {
-  padding: 0;
+
+.content-section-meditation .content-card .main-title-decor:nth-child(n) {
+  font-weight: normal;
 }
+
 .text-main {
   font-family: var(--font-family);
   font-weight: 400;
@@ -190,6 +200,7 @@
   color: var(--text-color);
   padding-bottom: 0.3em;
 }
+
 .content-card {
   display: grid;
   row-gap: 0.6em;
@@ -223,7 +234,6 @@
 /*Галерея*/
 .main-section-gallery {
   display: grid;
-  height: 100%;
   padding-top: 0.7em;
   gap: 0.6em;
   justify-self: center;
@@ -231,32 +241,28 @@
 
 .sectiom-gallery-item {
   object-fit: cover;
+  object-position: center;
   width: 100%;
   height: 100%;
 }
 
 .image-sunset {
-  max-width: 355px;
   width: 100%;
 }
 
 .image-ice-cream {
-  max-width: 355px;
   width: 100%;
 }
 
 .tape {
-  max-width: 355px;
   width: 100%;
 }
 
 .image-books {
-  max-width: 355px;
   width: 100%;
 }
 
 .image-street {
-  max-width: 355px;
   width: 100%;
 }
 
@@ -406,8 +412,6 @@
 
   /*Галерея*/
   .main-section-gallery {
-    max-width: 768px;
-    width: 100%;
     object-fit: contain;
     grid-template-areas:
       "sunset sunset ice-cream"
@@ -416,34 +420,30 @@
     gap: 1.5em;
     padding-top: 1em;
   }
+
   .image-sunset {
     grid-area: sunset;
-    max-width: 479px;
   }
 
   .image-ice-cream {
     grid-area: ice-cream;
-    max-width: 229px;
   }
 
   .tape {
     grid-area: tape;
-    max-width: 229px;
   }
 
   .image-books {
     grid-area: books;
-    max-width: 230px;
   }
 
   .image-street {
     grid-area: street;
-    max-width: 479px;
   }
 
   /*Подвал*/
   .footer {
-    max-width: 768px;
+    max-width: 1024px;
     min-height: 1024px;
     margin-top: 3.6em;
   }
@@ -455,7 +455,7 @@
 
 @media (min-width: 1024px) {
   .header {
-    max-width: 1024px;
+    max-width: 1440px;
     min-height: 768px;
     padding-top: 0;
     gap: 1.25em;
@@ -505,7 +505,12 @@
     padding-right: 0.2em;
     padding-left: 1.2em;
   }
-
+  .text-concentrate-walk-word {
+    pointer-events: none;
+    outline: none;
+    text-decoration: none;
+    text-shadow: none;
+  }
   .content-section-concentration-multitasking {
     column-gap: 0.9em;
   }
@@ -520,7 +525,7 @@
 
   .main-title-low-concentration {
     max-width: 315px;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.45em;
   }
 
   .content-section-low-concentration-gadgets .content-card:nth-child(1) {
@@ -541,38 +546,19 @@
   }
   .content-section-meditation {
     padding-top: 3.5em;
-    max-width: 1024px;
   }
   .main-title-meditation {
     max-width: 315px;
   }
   .content-section-picture {
+    max-width: 1440px;
     padding-top: 4.7em;
   }
   .main-section-gallery {
-    max-width: 1024px;
+    max-width: 1440px;
     gap: 1.5em;
   }
 
-  .image-sunset {
-    max-width: 650px;
-  }
-
-  .image-ice-cream {
-    max-width: 314px;
-  }
-
-  .tape {
-    max-width: 315px;
-  }
-
-  .image-books {
-    max-width: 315px;
-  }
-
-  .image-street {
-    max-width: 649px;
-  }
   /*Подвал*/
   .footer {
     max-width: 1440px;

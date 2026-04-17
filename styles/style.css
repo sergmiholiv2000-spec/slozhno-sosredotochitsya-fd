@@ -188,10 +188,6 @@
   background-color: var(--text-color-decor-bg);
 }
 
-.content-section-meditation .content-card .main-title-decor:nth-child(n) {
-  font-weight: normal;
-}
-
 .text-main {
   font-family: var(--font-family);
   font-weight: 400;
@@ -210,21 +206,29 @@
   padding-top: 2.5em;
   gap: 1.3em;
 }
-
-.content-section-low-concentration-gadgets {
-  gap: 1.15em;
-  padding-top: 3.4em;
-}
-.content-section-meditation {
-  padding-top: 3.3em;
+.card-multitasking-card {
+  display: grid;
   gap: 1.3em;
 }
-.main-title-low-concentration {
-  padding-bottom: 0.3em;
+.content-section-low-concentration-gadgets {
+  gap: 1em;
+  padding-top: 3.4em;
 }
 
-.content-section-low-concentration-gadgets .content-card:nth-child(1) {
-  gap: 0.8em;
+.card-concentration-gadgets-card {
+  display: grid;
+  gap: 1.3em;
+  padding-top: 0.2em;
+}
+
+.content-section-meditation {
+  padding-top: 3.2em;
+  gap: 1.3em;
+}
+
+.card-meditation-card {
+  display: grid;
+  gap: 1.3em;
 }
 
 .content-section-picture {
@@ -276,7 +280,7 @@
   position: relative;
   align-items: center;
   justify-self: center;
-  margin-top: 2.6em;
+  margin-top: 2.5em;
 }
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -353,7 +357,13 @@
     padding-top: 3.8em;
     row-gap: 1.2em;
     grid-template-columns: 1fr 2fr;
+    grid-auto-flow: dense;
   }
+
+  .card-multitasking-card {
+    gap: 1.2em;
+  }
+
   .main-title-five-tips {
     grid-column: 2;
     grid-row: 1;
@@ -363,51 +373,47 @@
   }
 
   .content-section-low-concentration-gadgets {
-    padding-top: 5em;
-    width: 100%;
+    padding-top: 3.8em;
+    gap: 1.2em;
   }
+
   .main-title-low-concentration {
     max-width: 236px;
   }
 
-  .content-section:nth-child(3) {
-    grid-template-areas: "what five-tips five-tips" "what sky sky" "what music music" "what walk walk" "what walk walk" "what food food" "what read read";
+  .card-concentration-gadgets-card {
+    padding-top: 0.2em;
+    gap: 1.1em;
+  }
+
+  .content-section-meditation {
+    grid-template-columns: 1fr;
+    grid-auto-flow: dense;
+    padding-top: 4.8em;
+    gap: 1.2em;
+  }
+
+  .card-meditation-card {
+    grid-column: 2/4;
+    grid-row: 1;
+    padding-top: 2.8em;
+    max-width: 472px;
+    gap: 1.2em;
   }
 
   .main-title-meditation {
-    grid-area: what;
-    max-width: 236px;
+    width: 100%;
+    width: fit-content;
   }
 
   .main-title-five-tips {
-    grid-area: five-tips;
-  }
-  .content-section-meditation {
-    padding-top: 4.8em;
-    row-gap: 1.2em;
-  }
-
-  .content-section-meditation .content-card:nth-child(3) {
-    grid-area: sky;
-    padding-top: 0.1em;
-  }
-  .content-section-meditation .content-card:nth-child(4) {
-    grid-area: music;
-  }
-
-  .content-section-meditation .content-card:nth-child(5) {
-    grid-area: walk;
-  }
-  .content-section-meditation .content-card:nth-child(6) {
-    grid-area: food;
-  }
-  .content-section-meditation .content-card:nth-child(7) {
-    grid-area: read;
+    width: 100%;
+    grid-column: 2/4;
   }
 
   .content-section-picture {
     max-width: 1024px;
-    padding-top: 4.9em;
+    padding-top: 4.7em;
   }
 
   /*Галерея*/
@@ -419,6 +425,7 @@
       "tape street street";
     gap: 1.5em;
     padding-top: 1em;
+    grid-auto-flow: dense;
   }
 
   .image-sunset {
@@ -450,6 +457,7 @@
   .footer__title {
     justify-self: center;
     align-self: center;
+    padding-top: 0.1em;
   }
 }
 
@@ -458,7 +466,7 @@
     max-width: 1440px;
     min-height: 768px;
     padding-top: 0;
-    gap: 1.25em;
+    gap: 1.29em;
     padding-right: 0;
   }
 
@@ -482,8 +490,8 @@
   .header__theme-menu-list {
     display: flex;
     justify-content: space-between;
-    gap: 1em;
-    padding-left: 1em;
+    gap: 1.1em;
+    padding-left: 1.3em;
   }
 
   .header__title {
@@ -492,12 +500,12 @@
     padding-right: 0.3em;
   }
   .header__title__text {
-    padding-top: 5.9em;
+    padding-top: 5.8em;
+    padding-right: 0.3em;
   }
 
   .title__text {
     max-width: 491px;
-    margin-right: 0.5em;
   }
 
   /*Контент*/
@@ -505,51 +513,36 @@
     padding-right: 0.2em;
     padding-left: 1.2em;
   }
-  .text-concentrate-walk-word {
-    pointer-events: none;
-    outline: none;
-    text-decoration: none;
-    text-shadow: none;
-  }
+
   .content-section-concentration-multitasking {
     column-gap: 0.9em;
   }
+
   .content-section-low-concentration-gadgets {
-    grid-template-areas:
-      "card-concentration . ."
-      "card-concentration card-food card-gadget";
+    padding-top: 3.7em;
   }
-  .main-title-decor {
-    height: fit-content;
+  .card-concentration-gadgets-card {
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 0.1em;
+    align-items: start;
+    grid-auto-flow: dense;
   }
 
   .main-title-low-concentration {
     max-width: 315px;
-    padding-bottom: 0.45em;
   }
 
-  .content-section-low-concentration-gadgets .content-card:nth-child(1) {
-    grid-area: card-concentration;
-    height: fit-content;
-    gap: 0.7em;
-  }
-
-  .content-section-low-concentration-gadgets .content-card:nth-child(2) {
-    grid-area: card-food;
-    padding-top: 2.9em;
-    height: fit-content;
-  }
-
-  .content-section-low-concentration-gadgets .content-card:nth-child(3) {
-    grid-area: card-gadget;
-    padding-top: 2.9em;
-  }
   .content-section-meditation {
-    padding-top: 3.5em;
+    padding-top: 5.1em;
+    gap: 0.5em;
   }
-  .main-title-meditation {
-    max-width: 315px;
+
+  .card-meditation-card {
+    max-width: 649px;
+    width: 100%;
+    padding-top: 2.6em;
   }
+
   .content-section-picture {
     max-width: 1440px;
     padding-top: 4.7em;
@@ -563,7 +556,7 @@
   .footer {
     max-width: 1440px;
     min-height: 768px;
-    margin-top: 3.7em;
+    margin-top: 3.6em;
   }
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
